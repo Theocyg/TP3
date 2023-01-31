@@ -1,7 +1,8 @@
-#include"Personne";
+import java.util.*;
 public class Architecte {
-    public String Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
-        super(nom, prenom);
+
+    public String Architecte(String nom, String prenom, String civilite, String mail, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
+        super(nom, prenom, civilite, mail);
         this.conseilRegional=conseilRegional;
         this.inscriptionOrdre=inscriptionOrdre;
         this.adresse = adresse;
@@ -34,6 +35,7 @@ public class Architecte {
         public String toString (){
             String chaine = "";
             chaine = chaine + this.nom + " " + this.prenom + " ";
+            chaine = chaine + this.civilite+""+this.mail+"";
             chaine = chaine + this.conseilRegional + " ";
             chaine = chaine + this.adresse + " ";
             chaine = chaine + this.telephone + " ";
