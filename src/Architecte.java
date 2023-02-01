@@ -1,37 +1,26 @@
 import java.util.*;
 import java.lang.String;
- class Architecte extends Personne{
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+class Architecte extends Personne{
 
      public Adresse adresse;
      public String telephone;
      private String conseilRegional;
      private boolean inscriptionOrdre;
-     private String telephoneValide;
-     public void Maj_conseilRegional{
-         System.out.println(nom+ "/t "+prenom+"/t "+conseilRegional+"/t "+telephone+"/t "+inscriptionOrdre+"/t ");
-     }
 
-     if(telephoneValide(telephone)){
-         this.telephone=telephone;
-     }
-        else{
-         this.telephone="";
-         Maj_conseilRegional();
+     public void Maj_conseilRegional(){
+         System.out.println(nom+ "/t "+prenom+"/t "+conseilRegional+"/t "+telephone+"/t "+inscriptionOrdre+"/t ");
      }
      public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
          super(nom, prenom);
          this.conseilRegional=conseilRegional;
          this.inscriptionOrdre=inscriptionOrdre;
          this.adresse = adresse;
+         this.telephone = telephoneValide(telephone);
 
-         private boolean telephoneValide(String telephone){
-             if (telephone.length() == 10 && telephone.equals(telephone)) {
-                 return true;
-             }
-             else {
-                 return false;
-             }
-         }
 
          public void Maj_conseilRegional(){
              if (inscriptionOrdre) {
@@ -42,7 +31,7 @@ import java.lang.String;
 
          }
 
-         public String toString (){
+         public String toString(){
              String chaine = "";
              chaine = chaine + this.nom + " " + this.prenom + " ";
              chaine = chaine + this.conseilRegional + " ";
@@ -58,14 +47,14 @@ import java.lang.String;
          }
      }
 
-
-     public void setConseilRegional(String conseilRegional) {
+    public void setConseilRegional(String conseilRegional) {
          this.conseilRegional = conseilRegional;
      }
 
      public String getConseilRegional() {
          return conseilRegional;
      }
+
      public String getTelephone() {
          return telephone;
      }
@@ -73,7 +62,6 @@ import java.lang.String;
      public void setTelephone(String telephone) {
          this.telephone = telephone;
      }
-
 
      @Override
      public String toString() {
