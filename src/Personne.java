@@ -1,3 +1,4 @@
+import java.util.*;
 abstract class Personne {
     private String nom;
     private String prenom;
@@ -5,10 +6,26 @@ abstract class Personne {
         this.nom= validate(nom, 50);
         this.prenom= validate(prenom, 50);
     }
-    private String validate (String chaine, Integer taille){
+    String validate(String chaine, Integer taille){
         chaine = chaine.substring(50, taille);
         return chaine;
     }
 
-    public  abstract String toString();
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public abstract String toString();
 }
