@@ -1,12 +1,22 @@
 import java.util.*;
-public class Architecte {
+ class Architecte {
 
-    public String Architecte(String nom, String prenom, String civilite, String mail, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
+     private String conseilRegional;
+     private boolean inscriptionOrdre;
+
+     public void setConseilRegional(String conseilRegional) {
+         this.conseilRegional = conseilRegional;
+     }
+
+     public String getConseilRegional() {
+         return conseilRegional;
+     }
+
+     public String Architecte(String nom, String prenom, String civilite, String mail, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone){
         super(nom, prenom, civilite, mail);
         this.conseilRegional=conseilRegional;
         this.inscriptionOrdre=inscriptionOrdre;
         this.adresse = adresse;
-
         if(telephoneValide(telephone)){
             this.telephone=telephone;
         }
