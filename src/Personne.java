@@ -1,7 +1,7 @@
 import java.util.*;
 abstract class Personne {
-    private String nom;
-    private String prenom;
+    public String nom;
+    public String prenom;
     public Personne(String nom, String prenom){
         this.nom= validate(nom, 50);
         this.prenom= validate(prenom, 50);
