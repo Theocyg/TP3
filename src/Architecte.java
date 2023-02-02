@@ -22,7 +22,7 @@ class Architecte extends Personne {
         return true;
     }
 
-    public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone) {
+    public Architecte(String nom,String prenom,String civilite,String mail, String conseilRegional,boolean inscriptionOrdre,Adresse adresse,String telephone) {
         super(nom,prenom);
         this.conseilRegional = conseilRegional;
         this.inscriptionOrdre = inscriptionOrdre;
