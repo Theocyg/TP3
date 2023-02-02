@@ -2,7 +2,7 @@ import java.lang.String;
 import java.lang.Character;
 
 
-class Architecte {
+class Architecte extends Personne {
 
     public Adresse adresse;
     public String telephone;
@@ -10,11 +10,11 @@ class Architecte {
     private boolean inscriptionOrdre;
 
     private boolean telephoneValide(String telephone){
-        if (telephone == null || telephone.length() != 10) {
+        if (telephone == null || telephone.length() != 15) {
             return false;
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             if (!Character.isDigit(telephone.charAt(i))) {
                 return false;
             }
@@ -23,6 +23,7 @@ class Architecte {
     }
 
     public Architecte(String nom, String prenom, String conseilRegional, boolean inscriptionOrdre, Adresse adresse, String telephone) {
+        super(nom,prenom);
         this.conseilRegional = conseilRegional;
         this.inscriptionOrdre = inscriptionOrdre;
         this.adresse = adresse;

@@ -14,7 +14,7 @@ public class Main {
         String mail = sc.nextLine();
         System.out.println("Entrez le conseil régional de l'architecte \n: ");
         String conseilRegional = sc.nextLine();
-        System.out.println("Est-il inscrit au conseil de l'ordre (Oui / Non) :\n ");
+        System.out.println("Est-il inscrit au conseil de l'ordre (true / false) :\n ");
         boolean inscriptionOrdre = sc.nextBoolean();
         System.out.println("Entrez la rue de l'adresse :\n ");
         String rue = sc.nextLine();
@@ -26,6 +26,8 @@ public class Main {
         String telephone = sc.nextLine();
 
         Adresse adresse = new Adresse(rue, ville, codePostal);
+        Architecte architecte = new Architecte(nom, prenom, civilite, mail, conseilRegional, inscriptionOrdre, adresse, telephone);
+        System.out.println(architecte);
 
 
     }

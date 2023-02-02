@@ -27,5 +27,5 @@ abstract class Personne {
         this.prenom = prenom;
     }
 
-    public static String toString() { }
+    public abstract String toString();
 }
