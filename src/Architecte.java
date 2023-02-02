@@ -1,7 +1,6 @@
 import java.util.*;
 import java.lang.String;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 
 class Architecte extends Personne{
@@ -30,6 +29,7 @@ class Architecte extends Personne{
              }
 
          }
+
 
          public String toString(){
              String chaine = "";
@@ -63,8 +63,4 @@ class Architecte extends Personne{
          this.telephone = telephone;
      }
 
-     @Override
-     public String toString() {
-         return null;
-     }
- }
+
