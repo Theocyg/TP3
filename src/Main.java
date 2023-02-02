@@ -28,6 +28,5 @@ public class Main {
         Adresse adresse = new Adresse(rue, ville, codePostal);
         Architecte architecte1 = new Architecte("Dupont", "Jacques","homme", "jacquesdupont@gmail.com", "Ordre des Architectes de France", true, adresse1, "0612345678");
 
-        System.out.println("\n" + Architecte.toString());
     }
 }
