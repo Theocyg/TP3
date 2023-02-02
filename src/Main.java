@@ -29,7 +29,7 @@ public class Main {
             System.out.println("Entrez le code postal de l'adresse :\n ");
             String codePostal = sc.next();
             System.out.println("Entrez le téléphone de l'architecte :\n ");
-            String telephone = sc.nextLine();
+            String telephone = sc.next();
 
             Adresse adresse = new Adresse(rue, ville, codePostal);
             Architecte architecte = new Architecte(nom, prenom, civilite, mail, conseilRegional, inscriptionOrdre, adresse, telephone);
