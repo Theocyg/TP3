@@ -26,7 +26,7 @@ public class Main {
         String telephone = sc.nextLine();
 
         Adresse adresse = new Adresse(rue, ville, codePostal);
-        Architecte architecte1 = new Architecte("Dupont", "Jacques","homme", "jacquesdupont@gmail.com", "Ordre des Architectes de France", true, adresse1, "0612345678");
+
 
     }
 }
